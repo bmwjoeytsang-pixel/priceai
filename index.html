@@ -17,28 +17,26 @@
 
         body { font-family: 'Segoe UI', "Microsoft JhengHei", sans-serif; line-height: 1.6; color: var(--dark-color); margin: 0; scroll-behavior: smooth; }
         
-        /* Nav */
+        /* Navigation */
         nav { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
         .logo { font-size: 24px; font-weight: bold; color: var(--primary-color); text-decoration: none; }
         .btn-deck { background: var(--primary-color); color: #fff; padding: 8px 18px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.3s; }
 
-        /* Hero */
+        /* Hero & Video Section */
         .hero { padding: 60px 5%; text-align: center; background: linear-gradient(135deg, #fff 0%, #e8f0fe 100%); }
         .hero h1 { font-size: 2.8rem; margin-bottom: 20px; }
         .hero p { font-size: 1.2rem; color: #555; max-width: 800px; margin: 0 auto 40px; }
-        
-        /* Video Player Block */
         .video-container { max-width: 750px; margin: 0 auto 50px; background: #000; border-radius: 15px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15); border: 4px solid #fff; }
-        video { width: 100%; display: block; border-radius: 11px; }
+        video { width: 100%; display: block; }
 
-        /* Comparison Table */
-        .comparison-section { padding: 60px 5%; background: #fff; }
+        /* Comparison Section */
+        .comparison-section { padding: 80px 5%; background: #fff; }
         .comp-table { width: 100%; max-width: 850px; margin: 0 auto; border-collapse: collapse; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-radius: 10px; overflow: hidden; }
-        .comp-table th, .comp-table td { padding: 18px; text-align: center; border: 1px solid #eee; }
+        .comp-table th, .comp-table td { padding: 20px; text-align: center; border: 1px solid #eee; }
         .comp-table th { background: #f8f9fa; font-weight: bold; }
         .highlight-col { background: rgba(66, 133, 244, 0.05); font-weight: bold; color: var(--primary-color); }
 
-        /* Pricing Cards */
+        /* Pricing Section */
         .pricing-section { padding: 80px 5%; background: var(--light-bg); }
         .pricing-grid { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
         .card { background: #fff; border: 1px solid #ddd; border-radius: 15px; padding: 40px 30px; width: 290px; position: relative; display: flex; flex-direction: column; transition: 0.3s; }
@@ -46,7 +44,7 @@
         .card.enterprise { border: 2px solid var(--gold-color); }
         .badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary-color); color: white; padding: 5px 18px; border-radius: 20px; font-size: 13px; font-weight: bold; }
         
-        .price { font-size: 2.8rem; font-weight: bold; margin: 20px 0; }
+        .price { font-size: 2.5rem; font-weight: bold; margin: 20px 0; }
         .price span { font-size: 1rem; color: #666; font-weight: normal; }
         .features { list-style: none; padding: 0; margin-bottom: 30px; flex-grow: 1; }
         .features li { margin: 12px 0; display: flex; align-items: flex-start; font-size: 0.95rem; text-align: left; }
@@ -56,124 +54,4 @@
         .btn-wa { display: block; background: #25d366; color: white; text-decoration: none; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; transition: 0.3s; }
         .btn-wa.ent { background: var(--gold-color); }
 
-        /* FAQ */
-        .faq-section { padding: 80px 5%; max-width: 850px; margin: 0 auto; }
-        .faq-item { border-bottom: 1px solid #eee; padding: 25px 0; }
-        .faq-q { font-weight: bold; color: var(--primary-color); font-size: 1.1rem; margin-bottom: 10px; cursor: pointer; }
-
-        footer { text-align: center; padding: 60px 20px; background: var(--dark-color); color: #aaa; }
-    </style>
-</head>
-<body>
-
-<nav>
-    <a href="#" class="logo">PriceAI</a>
-    <a href="https://wa.me/85293299828?text=你好Joey，我想索取PriceAI嘅詳細Sales Deck資料" class="btn-deck">索取完整 Sales Deck</a>
-</nav>
-
-<section class="hero">
-    <h1>不再人肉查價，讓利潤自動化</h1>
-    <p>每日 24/7 自動對焦全港對手價格與庫存。AI 即時建議加價與減價策略。</p>
-    
-    <div class="video-container">
-        <video controls preload="metadata" playsinline>
-            <source src="copy_A06CEBEB-07D8-47BB-AE52-47F28856BDE5.mov" type="video/quicktime">
-            您的瀏覽器不支援播放此影片，請聯絡我們索取示範片。
-        </video>
-    </div>
-</section>
-
-<section class="comparison-section">
-    <h2 style="text-align:center">為什麼零售老闆都轉向 AI？</h2>
-    <table class="comp-table">
-        <thead>
-            <tr>
-                <th>監控維度</th>
-                <th>傳統人工查價</th>
-                <th class="highlight-col">PriceAI 系統</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>監控頻率</td>
-                <td>每週一次或更少</td>
-                <td class="highlight-col">24/7 全天候監控</td>
-            </tr>
-            <tr>
-                <td>數據深度</td>
-                <td>僅限價格</td>
-                <td class="highlight-col">價格 + 庫存狀態偵測</td>
-            </tr>
-            <tr>
-                <td>每月成本</td>
-                <td>~$4,000 (人工工時)</td>
-                <td class="highlight-col">低至 $980</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-
-<section class="pricing-section">
-    <div class="pricing-grid">
-        <div class="card">
-            <div class="plan-name">Standard 標準</div>
-            <div class="price">HK$980<span>/月</span></div>
-            <ul class="features">
-                <li><i class="fas fa-check"></i> 20 個監控點</li>
-                <li><i class="fas fa-check"></i> 每月 5 條 URL 更換</li>
-                <li><i class="fas fa-check"></i> AI 定價建議</li>
-                <li><i class="fas fa-check"></i> Telegram 戰報</li>
-                <li><i class="fas fa-check"></i> <span class="setup-tag">$0 Setup Fee</span></li>
-            </ul>
-            <a href="https://wa.me/85293299828?text=我想了解Standard方案" class="btn-wa">立即啟動</a>
-        </div>
-
-        <div class="card featured">
-            <div class="badge">最受歡迎</div>
-            <div class="plan-name">Professional 專業</div>
-            <div class="price">HK$2,880<span>/月</span></div>
-            <ul class="features">
-                <li><i class="fas fa-check"></i> 80 個監控點</li>
-                <li><i class="fas fa-check"></i> 每月 20 條 URL 調校</li>
-                <li><i class="fas fa-check"></i> 庫存狀態監測</li>
-                <li><i class="fas fa-check"></i> 優先數據校準</li>
-                <li><i class="fas fa-check"></i> <span class="setup-tag">$0 Setup Fee</span></li>
-            </ul>
-            <a href="https://wa.me/85293299828?text=我想了解Pro方案" class="btn-wa">立即啟動</a>
-        </div>
-
-        <div class="card enterprise">
-            <div class="badge" style="background:var(--gold-color)">企業旗艦</div>
-            <div class="plan-name">Enterprise 企業</div>
-            <div class="price">客製化報價</div>
-            <ul class="features">
-                <li><i class="fas fa-crown"></i> 無限監控點</li>
-                <li><i class="fas fa-check"></i> 專屬 AI Prompt 調校</li>
-                <li><i class="fas fa-check"></i> 跨國多幣種監控</li>
-                <li><i class="fas fa-check"></i> 1 對 1 專家服務</li>
-                <li><i class="fas fa-check"></i> <span class="setup-tag">$0 Setup Fee</span></li>
-            </ul>
-            <a href="https://wa.me/85293299828?text=我想洽談Enterprise方案" class="btn-wa ent">聯絡專家</a>
-        </div>
-    </div>
-</section>
-
-<section class="faq-section">
-    <h2 style="text-align:center">常見問題 FAQ</h2>
-    <div class="faq-item">
-        <div class="faq-q">Q: 訂購後的啟動流程？</div>
-        <div class="faq-a">WhatsApp 確定方案後，填寫我們提供的 Google Sheet URL 清單。系統會在 24 小時內完成技術對接並發送報表。</div>
-    </div>
-    <div class="faq-item">
-        <div class="faq-q">Q: 點樣更新產品網址？</div>
-        <div class="faq-a">只需喺專屬表格內「Copy & Paste」新網址即可。系統會自動偵測變更並由 AI 接入分析。</div>
-    </div>
-</section>
-
-<footer>
-    <p>PriceAI Automation Specialist | WhatsApp: +852 9329 9828</p>
-    <p style="font-size: 13px; margin-top: 10px;">&copy; 2026 PriceAI. All Rights Reserved.</p>
-</footer>
-
-</body>
-</html>
+        /* Full FAQ Section
