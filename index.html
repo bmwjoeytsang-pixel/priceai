@@ -54,4 +54,156 @@
         .btn-wa { display: block; background: #25d366; color: white; text-decoration: none; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; transition: 0.3s; }
         .btn-wa.ent { background: var(--gold-color); }
 
-        /* Full FAQ Section
+        /* Full FAQ Section */
+        .faq-section { padding: 80px 5%; max-width: 850px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid #eee; padding: 25px 0; }
+        .faq-q { font-weight: bold; color: var(--primary-color); font-size: 1.1rem; margin-bottom: 12px; }
+        .faq-a { color: #555; font-size: 0.95rem; line-height: 1.8; }
+        .step-box { background: #f1f8ff; border-left: 4px solid var(--secondary-color); padding: 20px; margin-top: 15px; }
+
+        footer { text-align: center; padding: 60px 20px; background: var(--dark-color); color: #aaa; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#" class="logo">PriceAI</a>
+    <a href="https://wa.me/85293299828?text=你好Joey，我想索取PriceAI嘅完整Sales Deck資料" class="btn-deck">索取 Sales Deck</a>
+</nav>
+
+<section class="hero">
+    <h1>不再人肉查價，讓利潤自動化</h1>
+    <p>針對紅酒、美妝、母嬰零售：24/7 全自動對價系統。對手斷貨即時加價，對手減價即時報信。</p>
+    
+    <div class="video-container">
+        <video controls preload="metadata" playsinline>
+            <source src="copy_A06CEBEB-07D8-47BB-AE52-47F28856BDE5.mov" type="video/quicktime">
+            您的瀏覽器不支援播放此影片。
+        </video>
+    </div>
+</section>
+
+<section class="comparison-section">
+    <h2 style="text-align:center">為什麼零售老闆都轉向 AI？</h2>
+    <table class="comp-table">
+        <thead>
+            <tr>
+                <th>監控維度</th>
+                <th>傳統人工查價</th>
+                <th class="highlight-col">PriceAI 系統</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>監控頻率</td>
+                <td>每週一次或更少</td>
+                <td class="highlight-col">24/7 全天候自動掃描</td>
+            </tr>
+            <tr>
+                <td>數據深度</td>
+                <td>僅限價格</td>
+                <td class="highlight-col">價格 + 庫存狀態 (有/無貨)</td>
+            </tr>
+            <tr>
+                <td>反應速度</td>
+                <td>延遲數天</td>
+                <td class="highlight-col">分鐘級 Telegram 即時戰報</td>
+            </tr>
+            <tr>
+                <td>每月成本</td>
+                <td>~$4,000 (人工薪金比重)</td>
+                <td class="highlight-col">低至 $980</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="pricing-section">
+    <div class="pricing-grid">
+        <div class="card">
+            <div class="plan-name">Standard 標準</div>
+            <div class="price">HK$980<span>/月</span></div>
+            <ul class="features">
+                <li><i class="fas fa-check"></i> 20 個自動監控點</li>
+                <li><i class="fas fa-check"></i> 每月 5 條 URL 更換額度</li>
+                <li><i class="fas fa-check"></i> AI 定價策略建議</li>
+                <li><i class="fas fa-check"></i> Telegram 即時戰報推送</li>
+                <li><i class="fas fa-check"></i> 支援 Google Sheet 同步</li>
+                <li><i class="fas fa-check"></i> <span class="setup-tag">$0 Setup Fee</span></li>
+            </ul>
+            <a href="https://wa.me/85293299828?text=你好Joey，我想訂購Standard方案" class="btn-wa">立即啟動</a>
+        </div>
+
+        <div class="card featured">
+            <div class="badge">最受歡迎</div>
+            <div class="plan-name">Professional 專業</div>
+            <div class="price">HK$2,880<span>/月</span></div>
+            <ul class="features">
+                <li><i class="fas fa-check"></i> 80 個自動監控點</li>
+                <li><i class="fas fa-check"></i> 每月 20 條 URL 調校額度</li>
+                <li><i class="fas fa-check"></i> 跨平台數據深度整合</li>
+                <li><i class="fas fa-check"></i> 庫存狀態監測 (有/無貨)</li>
+                <li><i class="fas fa-check"></i> 優先技術支援與校準</li>
+                <li><i class="fas fa-check"></i> <span class="setup-tag">$0 Setup Fee</span></li>
+            </ul>
+            <a href="https://wa.me/85293299828?text=你好Joey，我想訂購Pro方案" class="btn-wa">立即啟動</a>
+        </div>
+
+        <div class="card enterprise">
+            <div class="badge" style="background:var(--gold-color)">企業旗艦</div>
+            <div class="plan-name">Enterprise 企業</div>
+            <div class="price">客製化報價</div>
+            <ul class="features">
+                <li><i class="fas fa-crown"></i> 無限監控點擴展</li>
+                <li><i class="fas fa-check"></i> 專屬 AI Prompt 調校</li>
+                <li><i class="fas fa-check"></i> 跨國及多幣種監控支持</li>
+                <li><i class="fas fa-check"></i> 深度自定義數據報表</li>
+                <li><i class="fas fa-check"></i> 1 對 1 專家技術服務</li>
+                <li><i class="fas fa-check"></i> <span class="setup-tag">$0 Setup Fee</span></li>
+            </ul>
+            <a href="https://wa.me/85293299828?text=你好Joey，我想洽談Enterprise方案" class="btn-wa ent">聯絡專家</a>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section">
+    <h2 style="text-align:center; margin-bottom: 40px;">常見問題 FAQ</h2>
+    
+    <div class="faq-item">
+        <div class="faq-q">Q: 訂購後的啟動流程是怎樣的？</div>
+        <div class="faq-a">
+            <div class="step-box">
+                <strong>簡單三步：</strong><br>
+                1. WhatsApp 確定方案 > 2. 獲取專屬數據表 > 3. 貼上網址後 24 小時內正式上線。
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q: 我如何上載或更新產品網址 (URL)？</div>
+        <div class="faq-a">我們會為您建立專屬的 Google Sheet 表格，您只需將對手的產品網址「複製並貼上」即可。系統會自動感應更新並進行 AI 對接。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q: 系統可以監控對手的庫存嗎？</div>
+        <div class="faq-a">可以。專業版 (Pro) 或以上支援監測對手網頁的庫存狀態（有貨/缺貨）。當主要對手斷貨時，系統會第一時間提醒您，助您把握加價時機。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q: 為什麼每月 URL 更換次數有限制？</div>
+        <div class="faq-a">因為每個新網址接入都需要 AI 重新解析網頁結構以確保數據 100% 精準。設定額度能維持服務的高穩定性，超出額度僅收取少量技術維修費。</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q: 我的內部庫存數據安全嗎？</div>
+        <div class="faq-a">絕對安全。系統僅讀取您主動上載到專屬 Google Sheet 的脫敏數據（如 SKU 與庫存數量），無需與您的內部數據庫（如 Oracle）直接連線，確保商業機密不外洩。</div>
+    </div>
+</section>
+
+<footer>
+    <p>PriceAI Automation Specialist | WhatsApp: +852 9329 9828</p>
+    <p style="font-size: 13px; margin-top: 10px;">&copy; 2026 PriceAI. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
