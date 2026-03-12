@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PriceAI | 全自動 AI 零售定價監控與戰略系統</title>
+    <title>PriceAI | 零售定價自動化專家</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
@@ -15,121 +15,107 @@
             --gold-color: #af9500;
         }
 
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: var(--dark-color); margin: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: var(--dark-color); margin: 0; }
         
-        /* Navigation */
+        /* Nav */
         nav { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
-        .logo { font-size: 24px; font-weight: bold; color: var(--primary-color); }
-        .nav-btns .btn-deck { background: #f1f3f4; color: #3c4043; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-right: 10px; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary-color); text-decoration: none; }
+        .btn-deck { background: #f1f3f4; color: #3c4043; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; }
 
-        /* Hero & Video Section */
-        .hero { padding: 60px 5%; text-align: center; background: #fff; }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 20px; color: var(--dark-color); }
-        .video-container { max-width: 800px; margin: 40px auto; background: #000; border-radius: 12px; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 20px 40px rgba(0,0,0,0.2); cursor: pointer; position: relative; overflow: hidden; }
-        .video-container:after { content: "\f04b"; font-family: "Font Awesome 5 Free"; font-weight: 900; font-size: 50px; opacity: 0.8; }
-        .video-label { position: absolute; bottom: 20px; width: 100%; text-align: center; background: rgba(0,0,0,0.5); padding: 10px 0; }
+        /* Hero */
+        .hero { padding: 60px 5%; text-align: center; background: linear-gradient(135deg, #fff 0%, #e8f0fe 100%); }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+        .industry-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+        .tag { background: #fff; padding: 8px 20px; border-radius: 50px; font-size: 14px; font-weight: bold; border: 1px solid #ddd; }
 
-        /* Pricing Section */
-        .pricing-section { padding: 80px 5%; background-color: var(--light-bg); }
+        /* Video Area */
+        .video-box { max-width: 700px; margin: 40px auto; background: #202124; border-radius: 12px; aspect-ratio: 16/9; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .video-box i { font-size: 50px; margin-bottom: 15px; opacity: 0.9; }
+
+        /* Pricing */
+        .pricing-section { padding: 80px 5%; background: var(--light-bg); }
         .pricing-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
-        .pricing-card { background: #fff; border: 1px solid #ddd; border-radius: 15px; padding: 30px; width: 300px; transition: 0.3s; position: relative; display: flex; flex-direction: column; }
-        .pricing-card.featured { border: 2px solid var(--primary-color); transform: scale(1.05); z-index: 10; }
-        .pricing-card.enterprise { border: 2px solid var(--gold-color); }
-        .badge { background: var(--primary-color); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); }
+        .card { background: #fff; border: 1px solid #ddd; border-radius: 15px; padding: 30px; width: 280px; position: relative; display: flex; flex-direction: column; transition: 0.3s; }
+        .card.featured { border: 2px solid var(--primary-color); transform: scale(1.05); z-index: 10; }
+        .card.enterprise { border: 2px solid var(--gold-color); }
+        .badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary-color); color: white; padding: 4px 15px; border-radius: 20px; font-size: 12px; }
         .badge.gold { background: var(--gold-color); }
-
-        .plan-name { font-size: 1.4rem; font-weight: bold; margin-bottom: 10px; }
-        .price { font-size: 2.2rem; font-weight: bold; margin-bottom: 20px; }
-        .features { list-style: none; padding: 0; margin-bottom: auto; text-align: left; font-size: 0.95rem; }
-        .features li { margin: 10px 0; display: flex; align-items: baseline; }
-        .features li i { color: var(--secondary-color); margin-right: 10px; }
         
-        .btn-whatsapp { display: block; background: #25d366; color: white; text-decoration: none; padding: 15px; border-radius: 8px; font-weight: bold; text-align: center; margin-top: 20px; }
-        .setup-tag { color: var(--accent-color); font-weight: bold; font-size: 0.8rem; display: block; margin-top: 5px; }
+        .price { font-size: 2rem; font-weight: bold; margin: 15px 0; }
+        .price span { font-size: 0.9rem; color: #666; }
+        .features { list-style: none; padding: 0; margin-bottom: auto; text-align: left; font-size: 0.9rem; }
+        .features li { margin: 10px 0; display: flex; align-items: center; }
+        .features li i { color: var(--secondary-color); margin-right: 8px; font-size: 14px; }
+        .setup-free { color: var(--accent-color); font-weight: bold; font-size: 13px; }
 
-        /* CTA Section */
-        .cta-bar { background: var(--primary-color); color: white; padding: 40px; text-align: center; }
-        .btn-large { background: white; color: var(--primary-color); padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
+        .btn-wa { display: block; background: #25d366; color: white; text-decoration: none; padding: 12px; border-radius: 8px; text-align: center; font-weight: bold; margin-top: 20px; }
+        .btn-wa.ent { background: var(--gold-color); }
 
-        footer { text-align: center; padding: 40px; color: #888; background: #fff; }
+        /* FAQ */
+        .faq-section { padding: 80px 5%; max-width: 800px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid #eee; padding: 20px 0; }
+        .faq-q { font-weight: bold; color: var(--primary-color); margin-bottom: 10px; cursor: pointer; }
+        .faq-a { color: #555; font-size: 0.95rem; }
+        .step-box { background: #f8f9fa; border-left: 4px solid var(--secondary-color); padding: 15px; margin-top: 10px; font-size: 0.9rem; }
 
-        @media (max-width: 768px) { .pricing-grid { flex-direction: column; align-items: center; } .pricing-card { width: 90%; transform: none !important; } }
+        footer { text-align: center; padding: 40px; color: #888; border-top: 1px solid #eee; }
+
+        @media (max-width: 768px) { .pricing-grid { flex-direction: column; align-items: center; } .card { width: 90%; transform: none !important; margin-bottom: 20px; } }
     </style>
 </head>
 <body>
 
 <nav>
-    <div class="logo">PriceAI</div>
-    <div class="nav-btns">
-        <a href="https://wa.me/85293299828?text=你好Joey，我想索取PriceAI嘅Sales Deck" class="btn-deck"><i class="fas fa-file-download"></i> 索取 Sales Deck</a>
-    </div>
+    <a href="#" class="logo">PriceAI</a>
+    <a href="https://wa.me/85293299828?text=你好Joey，我想索取PriceAI嘅Sales Deck資料" class="btn-deck">索取 Sales Deck</a>
 </nav>
 
 <section class="hero">
-    <h1>讓 AI 成為您的首席定價官</h1>
-    <p>每日自動分析市場動態，對手缺貨即時提醒加價，利潤最大化不再是難事。</p>
-    
-    <div class="video-container" onclick="window.open('https://wa.me/85293299828?text=我想睇下系統演示影片')">
-        <div class="video-label">點擊觀看系統演示：Telegram 戰報與 AI 策略分析</div>
+    <h1>全自動 AI 定價監測系統</h1>
+    <p>每日自動分析市場動態，對手缺貨即時提醒加價。專為紅酒、美妝、母嬰及家電零售商打造。</p>
+    <div class="industry-grid">
+        <div class="tag">🍷 紅酒名酒年份</div>
+        <div class="tag">💄 高級化妝品</div>
+        <div class="tag">🍼 嬰兒健康用品</div>
+        <div class="tag">⚡ 數碼生活家電</div>
+    </div>
+
+    <div class="video-box" onclick="window.open('https://wa.me/85293299828?text=我想睇下PriceAI系統演示影片')">
+        <i class="fas fa-play-circle"></i>
+        <span>點擊觀看系統演示：Telegram 戰報與 AI 策略</span>
     </div>
 </section>
 
 <section class="pricing-section">
     <div class="pricing-grid">
-        <div class="pricing-card">
-            <div class="plan-name">Standard 標準</div>
+        <div class="card">
+            <h3>Standard 標準</h3>
             <div class="price">HK$980<span>/月</span></div>
             <ul class="features">
                 <li><i class="fas fa-check"></i> 20 個全自動監控點</li>
                 <li><i class="fas fa-check"></i> 每月 5 條 URL 更換額度</li>
                 <li><i class="fas fa-check"></i> AI 定價策略建議</li>
-                <li><i class="fas fa-check"></i> Telegram 即時報表</li>
-                <li><i class="fas fa-check-circle"></i> <span class="setup-tag">$0 Setup Fee</span></li>
+                <li><i class="fas fa-check"></i> Telegram 即時戰報推送</li>
+                <li><i class="fas fa-check"></i> 支援 Excel/Google Sheet 同步</li>
+                <li class="setup-free">🔥 $0 Setup Fee</li>
             </ul>
-            <a href="https://wa.me/85293299828?text=我想了解Standard方案" class="btn-whatsapp">立即開始</a>
+            <a href="https://wa.me/85293299828?text=我想訂購Standard方案" class="btn-wa">立即啟動</a>
         </div>
 
-        <div class="pricing-card featured">
+        <div class="card featured">
             <div class="badge">最受歡迎</div>
-            <div class="plan-name">Professional 專業</div>
+            <h3>Professional 專業</h3>
             <div class="price">HK$2,880<span>/月</span></div>
             <ul class="features">
                 <li><i class="fas fa-check"></i> 80 個全自動監控點</li>
                 <li><i class="fas fa-check"></i> 每月 20 條 URL 調校額度</li>
                 <li><i class="fas fa-check"></i> 跨平台數據深度分析</li>
-                <li><i class="fas fa-check"></i> 庫存狀態偵測 (有/無貨)</li>
-                <li><i class="fas fa-check"></i> 優先技術支援</li>
-                <li><i class="fas fa-check-circle"></i> <span class="setup-tag">$0 Setup Fee</span></li>
+                <li><i class="fas fa-check"></i> 庫存狀態監測 (有/無貨)</li>
+                <li><i class="fas fa-check"></i> 優先數據校準支援</li>
+                <li class="setup-free">🔥 $0 Setup Fee</li>
             </ul>
-            <a href="https://wa.me/85293299828?text=我想了解Pro方案" class="btn-whatsapp">立即開始</a>
+            <a href="https://wa.me/85293299828?text=我想訂購Pro方案" class="btn-wa">立即啟動</a>
         </div>
 
-        <div class="pricing-card enterprise">
-            <div class="badge gold">旗艦級方案</div>
-            <div class="plan-name">Enterprise 企業</div>
-            <div class="price">客製化報價</div>
-            <ul class="features">
-                <li><i class="fas fa-crown" style="color:var(--gold-color)"></i> 無限監控點擴展</li>
-                <li><i class="fas fa-check"></i> 專屬 AI 提示詞調校 (Prompt Tuning)</li>
-                <li><i class="fas fa-check"></i> 跨國、多幣種數據支持</li>
-                <li><i class="fas fa-check"></i> 深度自定義報表 (Excel/BI)</li>
-                <li><i class="fas fa-check"></i> 1 對 1 顧問服務</li>
-                <li><i class="fas fa-check-circle"></i> <span class="setup-tag">$0 Setup Fee</span></li>
-            </ul>
-            <a href="https://wa.me/85293299828?text=你好Joey，我對Enterprise方案有興趣，想洽談客製化需求" class="btn-whatsapp" style="background:var(--gold-color)">聯絡專家</a>
-        </div>
-    </div>
-</section>
-
-<section class="cta-bar">
-    <h2>準備好提升您的市場競爭力了嗎？</h2>
-    <p>立即索取詳細 Sales Deck，了解 AI 如何幫您守住利潤。</p>
-    <a href="https://wa.me/85293299828?text=你好Joey，我想拎Sales Deck同埋想問下..." class="btn-large">索取完整方案資料</a>
-</section>
-
-<footer>
-    <p>&copy; 2026 PriceAI Specialist. All Rights Reserved. | WhatsApp: +852 9329 9828</p>
-</footer>
-
-</body>
-</html>
+        <div class="card enterprise">
+            <div class="badge gold">旗艦方案
