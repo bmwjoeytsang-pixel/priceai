@@ -32,6 +32,17 @@
         nav { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
         .logo { font-size: 26px; font-weight: bold; color: var(--primary-color); text-decoration: none; }
         .btn-deck { background: var(--secondary-color); color: #fff; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.3s; box-shadow: 0 4px 12px rgba(52, 168, 83, 0.2); }
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 40px; /* 這裡調整 Logo 的高度，40px 是導航欄的黃金比例 */
+    width: auto;  /* 自動按比例縮放寬度 */
+    display: block;
+}
 
         /* Hero & Video Section */
         .hero { padding: 60px 5%; text-align: center; background: linear-gradient(135deg, #fff 0%, #e8f0fe 100%); }
@@ -94,7 +105,9 @@
 <body>
 
 <nav>
-    <a href="/" class="logo">PriceAI</a>
+    <a href="/" class="logo">
+    <img src="images/logo.png" alt="PriceAI Logo" class="logo-img">
+    </a>
     <a href="https://wa.me/85293299828?text=你好PriceAI，我想索取PriceAI嘅完整Sales Deck資料" class="btn-deck">索取 Sales Deck</a>
 </nav>
 
