@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PriceAI.hk | 自動監控零售網店價格 | AI 定價策略系統</title>
-<meta name="description" content="PriceAI.hk 透過 AI 自動監控香港電商平台價格。助您精準識別競爭態勢、自動優化利潤，告別手動對價，5天內正式上線！立即獲取免費技術評估。">
-<meta name="keywords" content="PriceAI, 自動對價, 價格監控, 電商定價策略, 電子產品價格監控, 紅酒價格追蹤, 美妝對價, 母嬰產品追踨, 香港電商工具, AI市場分析">
+    <title>PriceAI.hk | 告別手動格價 | 香港 AI 自動化定價與市場監控系統</title>
+    <meta name="description" content="PriceAI.hk 透過 AI 自動監控香港電商平台價格。助您精準識別競爭態勢、自動優化利潤，告別手動對價，5天內正式上線！立即獲取免費技術評估。">
+    <meta name="keywords" content="PriceAI, 自動對價, 價格監控, 電商定價策略, 香港電商工具, AI市場分析, Price.com.hk監控, HKTVmall對價">
 
-<meta property="og:title" content="PriceAI.hk | 掌握市場主動權，AI 自動監控競爭對手價格">
-<meta property="og:description" content="告別手動對價！PriceAI 為您自動追蹤電商平台價格，提供 AI 智能定價建議。5天內快速上線，立即聯絡我們。">
-<meta property="og:image" content="https://www.priceai.hk/images/banner.jpg"> <meta property="og:url" content="https://www.priceai.hk/">
-<meta property="og:type" content="website">
-<meta name="robots" content="index, follow">
+    <meta property="og:title" content="PriceAI.hk | 掌握市場主動權，AI 自動監控競爭對手價格">
+    <meta property="og:description" content="告別手動對價！PriceAI 為您自動追蹤電商平台價格，提供 AI 智能定價建議。">
+    <meta property="og:image" content="https://www.priceai.hk/images/priceai-banner.webp"> 
+    <meta property="og:url" content="https://www.priceai.hk/">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         :root {
             --primary-color: #4285f4;
@@ -27,19 +30,25 @@
         
         /* Navigation */
         nav { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
-        .logo { font-size: 24px; font-weight: bold; color: var(--primary-color); text-decoration: none; }
-        .btn-deck { background: var(--primary-color); color: #fff; padding: 8px 18px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.3s; }
+        .logo { font-size: 26px; font-weight: bold; color: var(--primary-color); text-decoration: none; letter-spacing: -1px; }
+        .btn-deck { background: var(--secondary-color); color: #fff; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.3s; box-shadow: 0 4px 12px rgba(52, 168, 83, 0.2); }
+        .btn-deck:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(52, 168, 83, 0.3); }
 
-        /* Hero & Video Section */
+        /* Hero Section */
         .hero { padding: 60px 5%; text-align: center; background: linear-gradient(135deg, #fff 0%, #e8f0fe 100%); }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 20px; }
-        .hero p { font-size: 1.2rem; color: #555; max-width: 800px; margin: 0 auto 40px; }
-        .video-container { max-width: 750px; margin: 0 auto 50px; background: #000; border-radius: 15px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15); border: 4px solid #fff; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 20px; color: var(--dark-color); }
+        .hero p { font-size: 1.2rem; color: #555; max-width: 850px; margin: 0 auto 40px; }
+        
+        .banner-container { max-width: 1000px; margin: 0 auto 40px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .banner-img { width: 100%; display: block; height: auto; }
+
+        .video-container { max-width: 750px; margin: 40px auto; background: #000; border-radius: 15px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15); border: 4px solid #fff; }
         video { width: 100%; display: block; }
 
         /* Comparison Section */
         .comparison-section { padding: 80px 5%; background: #fff; }
-        .comp-table { width: 100%; max-width: 850px; margin: 0 auto; border-collapse: collapse; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-radius: 10px; overflow: hidden; }
+        .comp-table-wrapper { overflow-x: auto; max-width: 850px; margin: 0 auto; }
+        .comp-table { width: 100%; border-collapse: collapse; border-radius: 10px; overflow: hidden; }
         .comp-table th, .comp-table td { padding: 20px; text-align: center; border: 1px solid #eee; }
         .comp-table th { background: #f8f9fa; font-weight: bold; }
         .highlight-col { background: rgba(66, 133, 244, 0.05); font-weight: bold; color: var(--primary-color); }
@@ -47,9 +56,10 @@
         /* Pricing Section */
         .pricing-section { padding: 80px 5%; background: var(--light-bg); }
         .pricing-grid { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
-        .card { background: #fff; border: 1px solid #ddd; border-radius: 15px; padding: 40px 30px; width: 290px; position: relative; display: flex; flex-direction: column; transition: 0.3s; }
-        .card.featured { border: 2px solid var(--primary-color); transform: scale(1.05); z-index: 10; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
-        .card.enterprise { border: 2px solid var(--gold-color); }
+        .card { background: #fff; border: 1px solid #ddd; border-radius: 15px; padding: 40px 30px; width: 300px; position: relative; display: flex; flex-direction: column; transition: 0.3s; box-sizing: border-box; }
+        .card:hover { transform: translateY(-5px); }
+        .card.featured { border: 2.5px solid var(--primary-color); transform: scale(1.05); z-index: 10; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .card.enterprise { border: 2.5px solid var(--gold-color); }
         .badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary-color); color: white; padding: 5px 18px; border-radius: 20px; font-size: 13px; font-weight: bold; }
         
         .price { font-size: 2.5rem; font-weight: bold; margin: 20px 0; }
@@ -57,87 +67,96 @@
         .features { list-style: none; padding: 0; margin-bottom: 30px; flex-grow: 1; }
         .features li { margin: 12px 0; display: flex; align-items: flex-start; font-size: 0.95rem; text-align: left; }
         .features li i { color: var(--secondary-color); margin-right: 10px; margin-top: 4px; }
-        .setup-tag { background: #fff0f0; color: var(--accent-color); padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 12px; margin-left: 5px; }
+        .setup-tag { background: #fff0f0; color: var(--accent-color); padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 12px; }
 
         .btn-wa { display: block; background: #25d366; color: white; text-decoration: none; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; transition: 0.3s; }
+        .btn-wa:hover { opacity: 0.9; }
         .btn-wa.ent { background: var(--gold-color); }
 
-        /* Full FAQ Section */
+        /* FAQ Section */
         .faq-section { padding: 80px 5%; max-width: 850px; margin: 0 auto; }
         .faq-item { border-bottom: 1px solid #eee; padding: 25px 0; }
         .faq-q { font-weight: bold; color: var(--primary-color); font-size: 1.1rem; margin-bottom: 12px; }
         .faq-a { color: #555; font-size: 0.95rem; line-height: 1.8; }
-        .step-box { background: #f1f8ff; border-left: 4px solid var(--secondary-color); padding: 20px; margin-top: 15px; }
+        .step-box { background: #f1f8ff; border-left: 4px solid var(--secondary-color); padding: 20px; margin-top: 15px; border-radius: 0 8px 8px 0; }
+        .step { margin-bottom: 15px; }
+        .step-title { font-weight: bold; color: var(--dark-color); }
 
+        /* Footer */
         footer { text-align: center; padding: 60px 20px; background: var(--dark-color); color: #aaa; }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .card.featured { transform: none; margin: 30px 0; }
+            .pricing-grid { flex-direction: column; align-items: center; }
+        }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="#" class="logo">PriceAI</a>
+    <a href="/" class="logo">PriceAI</a>
     <a href="https://wa.me/85293299828?text=你好PriceAI，我想索取PriceAI嘅完整Sales Deck資料" class="btn-deck">索取 Sales Deck</a>
 </nav>
 
-<img src="images/priceai-banner.webp" width="100%" style="display: block; height: auto; aspect-ratio: 16 / 9; background-color: #f0f0f0;" alt="PriceAI 智能監控看板">
-    
 <section class="hero">
-    <h1>不再人手check價，讓利潤自動化</h1>
-    <p>針對紅酒、美妝、藥行、母嬰、電器、任何電子商務平台：24/7 全自動對價系統。對手冇貨即時加價，對手減價即時收到Whatsapp。</p>
+    <div class="banner-container">
+        <img src="images/priceai-banner.webp" class="banner-img" alt="PriceAI 智能監控看板">
+    </div>
+    <h1>告別手動格價，讓利潤自動化</h1>
+    <p>適用於紅酒、美妝、藥行、母嬰、電器等行業：24/7 全自動對價系統。對手缺貨即時加價賺到盡，對手減價即時 WhatsApp 戰報通知。</p>
     
-   <div class="video-container">
-    <video controls preload="metadata" playsinline width="100%">
-        <source src="videos/priceai-introduction.mp4" type="video/mp4">
-        
-        <source src="videos/priceai-introduction.mov" type="video/quicktime">
-        
-        您的瀏覽器不支援 HTML5 影片播放。
-    </video>
-</div>
+    <div class="video-container">
+        <video controls preload="metadata" playsinline>
+            <source src="videos/priceai-introduction.mp4" type="video/mp4">
+            您的瀏覽器不支援播放此影片。
+        </video>
+    </div>
 </section>
 
 <section class="comparison-section">
     <h2 style="text-align:center">為什麼零售老闆都轉向 AI？</h2>
-    <table class="comp-table">
-        <thead>
-            <tr>
-                <th>監控維度</th>
-                <th>傳統人工查價</th>
-                <th class="highlight-col">PriceAI 系統</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>監控頻率</td>
-                <td>每週一次或更少</td>
-                <td class="highlight-col">24/7 全天候自動掃描</td>
-            </tr>
-            <tr>
-                <td>數據深度</td>
-                <td>僅限價格</td>
-                <td class="highlight-col">價格 + 分析圖表 + 儀表板</td>
-            </tr>
-            <tr>
-                <td>反應速度</td>
-                <td>延遲數天</td>
-                <td class="highlight-col">分鐘級 Whatsapp 即時戰報</td>
-            </tr>
-            <tr>
-                <td>每月成本</td>
-                <td>~$4,000 (人工薪金比重)</td>
-                <td class="highlight-col">低至 $980</td>
-            </tr>
-        </tbody>
-    </table>
-
-<div style="text-align: center; margin-top: 40px;">
-        <p><b>本港已有等多間網上零售商店正式採用</b></p>
-        <a href="/solution" class="btn btn-blue">立即了解詳細運作模式</a>
+    <div class="comp-table-wrapper">
+        <table class="comp-table">
+            <thead>
+                <tr>
+                    <th>監控維度</th>
+                    <th>傳統人工查價</th>
+                    <th class="highlight-col">PriceAI 系統</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>監控頻率</td>
+                    <td>每週一次或隨機</td>
+                    <td class="highlight-col">24/7 全天候自動掃描</td>
+                </tr>
+                <tr>
+                    <td>反應速度</td>
+                    <td>延遲數天</td>
+                    <td class="highlight-col">分鐘級 WhatsApp 即時通知</td>
+                </tr>
+                <tr>
+                    <td>營運策略</td>
+                    <td>被動跟隨減價</td>
+                    <td class="highlight-col">主動偵測對手缺貨並加價</td>
+                </tr>
+                <tr>
+                    <td>每月成本</td>
+                    <td>~$4,000 (人工薪金)</td>
+                    <td class="highlight-col">低至 HK$980</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    
+    <div style="text-align: center; margin-top: 40px;">
+        <p><b>本港多間知名零售網店已正式採用</b></p>
+        <a href="/solution" style="color: var(--primary-color); font-weight: bold; text-decoration: none;">了解更多運作技術 →</a>
+    </div>
 </section>
 
-<section class="pricing-section">
+<section class="pricing-section" id="pricing">
     <div class="pricing-grid">
         <div class="card">
             <div class="plan-name">Standard 標準</div>
@@ -146,7 +165,7 @@
                 <li><i class="fas fa-check"></i> 20 個自動監控點</li>
                 <li><i class="fas fa-check"></i> 每月 5 條 URL 更換額度</li>
                 <li><i class="fas fa-check"></i> AI 定價策略建議</li>
-                <li><i class="fas fa-check"></i> Whatsapp 即時戰報推送</li>
+                <li><i class="fas fa-check"></i> WhatsApp 即時戰報推送</li>
                 <li><i class="fas fa-check"></i> 支援 Google Sheet 同步</li>
                 <li><i class="fas fa-check"></i> <span class="setup-tag">$0 Setup Fee</span></li>
             </ul>
@@ -161,23 +180,22 @@
                 <li><i class="fas fa-check"></i> 80 個自動監控點</li>
                 <li><i class="fas fa-check"></i> 每月 20 條 URL 調校額度</li>
                 <li><i class="fas fa-check"></i> AI 定價策略建議</li>
-                <li><i class="fas fa-check"></i> Whatsapp 即時戰報推送</li>
-                <li><i class="fas fa-check"></i> 支援 Google Sheet 同步</li>
+                <li><i class="fas fa-check"></i> WhatsApp 即時戰報推送</li>
                 <li><i class="fas fa-check"></i> 庫存狀態監測 (有/無貨)</li>
-                <li><i class="fas fa-check"></i> 優先技術支援與校準</li>
+                <li><i class="fas fa-check"></i> 優先技術支援</li>
                 <li><i class="fas fa-check"></i> <span class="setup-tag">$0 Setup Fee</span></li>
             </ul>
-            <a href="https://wa.me/85265355251?text=你PriceAI，我想訂購Pro方案" class="btn-wa">立即啟動</a>
+            <a href="https://wa.me/85265355251?text=你好PriceAI，我想訂購Professional方案" class="btn-wa">立即啟動</a>
         </div>
 
         <div class="card enterprise">
             <div class="badge" style="background:var(--gold-color)">企業旗艦</div>
             <div class="plan-name">Enterprise 企業</div>
-            <div class="price">客製化報價</div>
+            <div class="price">客製化</div>
             <ul class="features">
                 <li><i class="fas fa-crown"></i> 無限監控點擴展</li>
                 <li><i class="fas fa-check"></i> 專屬 AI Prompt 調校</li>
-                <li><i class="fas fa-check"></i> 跨國及多幣種監控支持</li>
+                <li><i class="fas fa-check"></i> 跨國及多幣種監控</li>
                 <li><i class="fas fa-check"></i> 深度自定義數據報表</li>
                 <li><i class="fas fa-check"></i> 1 對 1 專家技術服務</li>
                 <li><i class="fas fa-check"></i> <span class="setup-tag">$0 Setup Fee</span></li>
@@ -194,78 +212,34 @@
         <div class="faq-q">Q: 訂購後的啟動流程是怎樣的？</div>
         <div class="faq-a">
             <div class="step-box">
-                <strong>簡單五步：</strong><br>
-                <div class="service-steps">
-    <div class="step">
-        <div class="step-content">
-            <div class="step-title">1. WhatsApp 確定方案</div>
-            <div class="step-desc">聯絡我們的策略顧問，確認您的監測需求與業務規模。</div>
-        </div>
-    </div>
-
-    <div class="step">
-        <div class="step-content">
-            <div class="step-title">2. 技術可行性評估</div>
-            <div class="step-desc">告知您想監測的對手平台，我們將確認抓取權限與數據速度。</div>
-        </div>
-    </div>
-
-    <div class="step">
-        <div class="step-content">
-            <div class="step-title">3. Paypal / FPS 付首月月費</div>
-            <div class="step-desc">確認技術可行後，通過安全渠道支付首月服務費以啟動授權。</div>
-        </div>
-    </div>
-
-    <div class="step">
-        <div class="step-content">
-            <div class="step-title">4. 獲取專屬數據表</div>
-            <div class="step-desc"><span class="highlight">請在此貼上您本公司及對手的產品網址</span>，讓 AI 正式開始監控。</div>
-        </div>
-    </div>
-
-    <div class="step">
-        <div class="step-content">
-            <div class="step-title">5. 正式上線</div>
-            <div class="step-desc">完成網址貼附後，五個工作天內開始推送 AI 智能分析戰報。</div>
-        </div>
-    </div>
-</div>
+                <div class="step">
+                    <div class="step-title">1. WhatsApp 確定需求</div>
+                    <div>聯絡顧問確認方案。</div>
+                </div>
+                <div class="step">
+                    <div class="step-title">2. 技術可行性評估</div>
+                    <div>我們確認能否抓取您指定的對手平台。</div>
+                </div>
+                <div class="step">
+                    <div class="step-title">3. 支付啟動</div>
+                    <div>通過 FPS / 銀行轉帳支付首月月費。</div>
+                </div>
+                <div class="step">
+                    <div class="step-title">4. 填寫監控清單</div>
+                    <div>在專屬 Google Sheet 貼上產品網址。</div>
+                </div>
+                <div class="step">
+                    <div class="step-title">5. 五天內正式上線</div>
+                    <div>開始接收 WhatsApp AI 戰報。</div>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="faq-item">
-        <div class="faq-q">Q: 我如何上載或更新產品網址 (URL)？</div>
-        <div class="faq-a">我們會為您建立專屬的 Google Sheet 表格，您只需將對手的產品網址「複製並貼上」即可。系統會自動感應更新並進行 AI 對接。</div>
+        <div class="faq-q">Q: 我的數據安全嗎？</div>
+        <div class="faq-a">絕對安全。系統僅讀取您主動提供的產品網址及基本資訊，無需連線至您的核心資料庫，確保商業機密不外洩。</div>
     </div>
-
-    <div class="faq-item">
-        <div class="faq-q">Q: 系統可以監控對手的庫存嗎？</div>
-        <div class="faq-a">可以。專業版 (Pro) 或以上支援監測對手網頁的庫存狀態（有貨/缺貨）。當主要對手斷貨時，系統會第一時間提醒您，助您把握加價時機。</div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-q">Q: 為什麼每月 URL 更換次數有限制？</div>
-        <div class="faq-a">因為每個新網址接入都需要 AI 重新解析網頁結構以確保數據 100% 精準。設定額度能維持服務的高穩定性，超出額度僅收取少量技術維修費。</div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-q">Q: 我的內部庫存數據安全嗎？</div>
-        <div class="faq-a">絕對安全。系統僅讀取您主動上載到專屬 Google Sheet 的脫敏數據（如 SKU 與庫存數量），無需與您的內部數據庫（如 Oracle）直接連線，確保商業機密不外洩。</div>
-    </div>
-    <div class="faq-item">
-    <div class="faq-q">Q: 服務收費模式及付款安排是怎樣的？</div>
-    <div class="faq-a">
-        我們採用<strong>「先付後用」</strong>的月費訂閱制。
-        <div class="step-box">
-            1. <strong>首月費用：</strong> 確定方案後支付首月全額費用，系統隨即進入技術對接與啟動階段。<br>
-            2. <strong>續費安排：</strong> 服務按月計算，我們將於每期屆滿前 7 天向您發出下期帳單。<br>
-            3. <strong>付款方式：</strong> 支援轉數快 (FPS) 或 銀行轉帳。
-        </div>
-        *由於我們提供 <strong>$0 Setup Fee</strong>，首月費用將作為系統對接與 AI 調校的啟動資金。
-    </div>
-</div>
 </section>
 
 <footer>
