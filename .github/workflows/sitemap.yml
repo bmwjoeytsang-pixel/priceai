@@ -1,0 +1,28 @@
+name: Generate sitemap
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  sitemap_job:
+    runs-on: ubuntu-latest
+    name: Generate a sitemap
+    steps:
+    - name: Checkout the repo
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0 
+
+    - name: Generate Sitemap
+      uses: cicirello/generate-sitemap@v1
+      with:
+        base-url-path: https://www.priceai.hk/
+
+    - name: Commit and push
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git add sitemap.xml
+        git commit -m "Automated sitemap update" || exit 0
+        git push
