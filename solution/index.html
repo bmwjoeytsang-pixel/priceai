@@ -11,6 +11,25 @@
             --light: #f8f9fa;
             --accent: #d93025;
         }
+
+
+		        /* Navigation */
+        nav { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 26px; font-weight: bold; color: var(--primary-color); text-decoration: none; }
+        .btn-deck { background: var(--secondary-color); color: #fff; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.3s; box-shadow: 0 4px 12px rgba(52, 168, 83, 0.2); }
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 40px; /* 這裡調整 Logo 的高度，40px 是導航欄的黃金比例 */
+    width: auto;  /* 自動按比例縮放寬度 */
+    display: block;
+}
+
+		
         body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: var(--dark); margin: 0; padding: 0; }
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
         header { background: var(--primary); color: white; text-align: center; padding: 60px 20px; }
