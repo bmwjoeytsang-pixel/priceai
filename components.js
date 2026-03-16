@@ -17,6 +17,7 @@ const navHTML = `
 
 const footerHTML = `
 <footer style="text-align:center; padding: 50px 0; color: #999; font-size: 0.9rem; border-top: 1px solid #eee; margin-top: 50px;">
+    <p>聯絡我們：<a href="mailto:info@priceai.hk" style="color:#666; text-decoration:none;">info@priceai.hk</a></p>
     <p>&copy; 2026 PriceAI.hk All Rights Reserved.</p>
 </footer>
 `;
