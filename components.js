@@ -3,7 +3,7 @@ const navHTML = `
 <nav>
     <div class="nav-left"><a href="/" style="text-decoration:none; color:#666;">← 主頁</a></div>
     <a href="/" class="logo">
-        <img src="/images/logo.png" alt="PriceAI Logo" class="logo-img">
+        <img src="/images/logo.webq" alt="PriceAI Logo" class="logo-img">
     </a>  
 </nav>
 `;
