@@ -3,125 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>實戰案例 | PriceAI.hk - AI 自動對價成功故事</title>
-    <meta name="description" content="探索 PriceAI 如何幫助紅酒、美妝、電器及母嬰產品零售商實現自動定價策略，提升利潤並節省人力。">
+    <title>PriceAI - 香港最強 AI 自動對價系統 | 自動監控零售網店價格 | AI 定價策略系統</title>
+    <meta name="description" content="PriceAI.hk 透過 AI 自動監控香港電商平台價格。助您精準識別競爭態勢、自動優化利潤，告別手動對價，5天內正式上線！立即獲取免費技術評估。">
+    <meta name="keywords" content="PriceAI, 自動對價, 價格監控, 電商定價策略, 電子產品價格監控, 紅酒價格追蹤, 美妝對價, 母嬰產品追踨, 香港電商工具, AI市場分析">
+    <meta property="og:title" content="PriceAI.hk | 掌握市場主動權，AI 自動監控競爭對手價格">
+    <meta property="og:description" content="告別手動對價！PriceAI 為您自動追蹤電商平台價格，提供 AI 智能定價建議。5天內快速上線，立即聯絡我們。">
+    <meta property="og:image" content="https://www.priceai.hk/images/priceai-banner.webp"> 
+    <meta property="og:url" content="https://www.priceai.hk/">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">  
+    
+    <link rel="stylesheet" href="/style.css">
+    <script src="/components.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root { 
-            --primary: #4285f4; 
-            --secondary: #34a853; 
-            --accent: #d93025;
-            --warning: #ff9800;
-            --dark: #202124; 
-            --light-bg: #f8f9fa;
-        }
-
-        body { font-family: 'Segoe UI', "Microsoft JhengHei", sans-serif; line-height: 1.6; color: var(--dark); margin: 0; background: var(--light-bg); }
-
-        /* 導航欄：Logo 置中方案 */
-        nav {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            align-items: center;
-            background: #fff;
-            padding: 10px 5%;
-            border-bottom: 1px solid #eee;
-            position: sticky;
-            top: 0; 
-            z-index: 1000;
-            height: 80px;
-        }
-        
-        .nav-back { justify-self: start; }
-        .nav-back a { text-decoration: none; color: #666; font-size: 14px; font-weight: bold; }
-        .nav-back a:hover { color: var(--primary); }
-
-        .logo { grid-column: 2; display: flex; justify-content: center; }
-        .logo-img { height: 65px; width: auto; transition: 0.3s; } /* 置中且放大 */
-
-        .nav-cta { justify-self: end; }
-        .btn-deck { 
-            background: var(--secondary); color: #fff; padding: 10px 22px; 
-            border-radius: 50px; text-decoration: none; font-weight: bold; 
-            font-size: 14px; transition: 0.3s; box-shadow: 0 4px 12px rgba(52,168,83,0.2);
-        }
-        .btn-deck:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(52,168,83,0.3); }
-
-        /* 案例區塊容器 */
-        .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
-        .header-area { text-align: center; margin-bottom: 50px; }
-        h1 { font-size: 2.5rem; margin-bottom: 15px; color: var(--dark); }
-        .subtitle { color: #666; font-size: 1.1rem; }
-
-        /* 案例網格佈局 */
-        .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        
-        .case-card {
-            background: #fff; border-radius: 20px; padding: 35px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-            transition: 0.3s; display: flex; flex-direction: column;
-            border-top: 6px solid var(--primary);
-            position: relative;
-        }
-        .case-card:hover { transform: translateY(-10px); box-shadow: 0 15px 50px rgba(0,0,0,0.1); }
-        
-        .industry-tag { 
-            font-size: 0.85rem; font-weight: bold; text-transform: uppercase; 
-            letter-spacing: 1px; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;
-        }
-        
-        h3 { margin: 10px 0 20px; font-size: 1.35rem; line-height: 1.4; min-height: 3.5rem; }
-        .detail { font-size: 0.95rem; margin-bottom: 15px; }
-        .detail strong { color: #333; }
-
-        .result-box {
-            margin-top: auto; padding: 18px; border-radius: 12px; 
-            font-weight: bold; text-align: center; font-size: 1rem;
-        }
-
-        /* 案例顏色區分 */
-        .case-wine { border-top-color: var(--primary); }
-        .case-wine .industry-tag, .case-wine .result-box { color: var(--primary); }
-        .case-wine .result-box { background: #e8f0fe; }
-
-        .case-beauty { border-top-color: var(--secondary); }
-        .case-beauty .industry-tag, .case-beauty .result-box { color: var(--secondary); }
-        .case-beauty .result-box { background: #e6f4ea; }
-
-        .case-appliance { border-top-color: var(--accent); }
-        .case-appliance .industry-tag, .case-appliance .result-box { color: var(--accent); }
-        .case-appliance .result-box { background: #fce8e6; }
-
-        .case-baby { border-top-color: var(--warning); }
-        .case-baby .industry-tag, .case-baby .result-box { color: #e65100; }
-        .case-baby .result-box { background: #fff3e0; }
-
-        /* 底部 CTA */
-        .cta-footer { 
-            text-align: center; margin-top: 80px; padding: 60px 20px; 
-            background: linear-gradient(135deg, #fff 0%, #e8f0fe 100%); 
-            border-radius: 30px; 
-        }
-        .btn-whatsapp { 
-            background: #25d366; color: #fff; padding: 18px 45px; 
-            border-radius: 50px; text-decoration: none; font-weight: bold; 
-            font-size: 1.2rem; display: inline-block; transition: 0.3s;
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
-        }
-        .btn-whatsapp:hover { transform: scale(1.05); background: #1ebe5d; }
-
-        footer { text-align: center; padding: 50px 0; color: #999; font-size: 0.9rem; }
-
-        @media (max-width: 768px) {
-            nav { grid-template-columns: 1fr 1fr; height: auto; padding: 15px 5%; }
-            .nav-back { display: none; }
-            .logo { grid-column: 1; justify-content: flex-start; }
-            .logo-img { height: 45px; }
-            .nav-cta { grid-column: 2; }
-            h1 { font-size: 2rem; }
-        }
-    </style>
 </head>
+
 <body>
 
 <nav>
