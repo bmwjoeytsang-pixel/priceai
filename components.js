@@ -1,10 +1,17 @@
 // components.js
 const navHTML = `
 <nav>
-    <div class="nav-left"><a href="/" style="text-decoration:none; color:#666;">← 主頁</a></div>
+    <div class="nav-left">
+        <a href="/" style="text-decoration:none; color:#666; font-weight:bold;">← 主頁</a>
+    </div>
+    
     <a href="/" class="logo">
         <img src="/images/logo.png" alt="PriceAI Logo" class="logo-img">
-    </a>  
+    </a>
+
+    <div class="nav-right" style="display:flex; justify-content: flex-end;">
+        <a href="https://wa.me/85265355251?text=你好PriceAI，我想索取PriceAI嘅完整Sales Deck資料" class="btn-deck">索取 Sales Deck</a>
+    </div>
 </nav>
 `;
 
