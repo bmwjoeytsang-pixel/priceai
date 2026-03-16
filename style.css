@@ -71,7 +71,6 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 2rem; }
             .card.featured { transform: none; margin: 30px 0; }
-        }
-    </style>
+        }  
 
     </style>
