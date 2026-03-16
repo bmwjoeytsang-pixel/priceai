@@ -125,6 +125,55 @@ section { padding: 80px 5%; }
     section { padding: 50px 5%; }
 }
 
+/* --- FAQ Section 完整樣式 --- */
+
+.faq-section {
+    padding: 80px 5%;
+    max-width: 900px; /* 限制寬度讓文字不要太散，更專業 */
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.2rem;
+    color: var(--dark);
+}
+
+.faq-item {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border); /* 每個問題之間有一條淺色線 */
+}
+
+.faq-item:last-child {
+    border-bottom: none; /* 最後一項不需要線 */
+}
+
+.faq-q {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--primary); /* 問題顏色統一使用品牌藍 */
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.faq-a {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1rem;
+    padding-left: 5px;
+}
+
+/* 針對 FAQ 內的 Step Box 特別優化 */
+.faq-a .step-box {
+    margin-top: 15px;
+}
+
+
+
 /* --- FAQ 五步流程專屬樣式 --- */
 .step-box {
     background: #f0f7ff;         /* 淺藍色背景 */
