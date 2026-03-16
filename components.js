@@ -4,11 +4,7 @@ const navHTML = `
     <div class="nav-left"><a href="/" style="text-decoration:none; color:#666;">← 主頁</a></div>
     <a href="/" class="logo">
         <img src="/images/logo.png" alt="PriceAI Logo" class="logo-img">
-    </a>
-    <div class="nav-right" style="display:flex; align-items:center; justify-content: flex-end; gap:20px;">
-        <a href="/case/" style="text-decoration:none; color:var(--dark); font-weight:bold; font-size:14px;">實戰案例</a>
-        <a href="https://wa.me/85293299828" class="btn-deck">索取 Sales Deck</a>
-    </div>
+    </a>  
 </nav>
 `;
 
