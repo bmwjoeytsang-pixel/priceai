@@ -1,0 +1,56 @@
+/* style.css */
+:root {
+    --primary: #4285f4;
+    --secondary: #34a853;
+    --dark: #202124;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', "Microsoft JhengHei", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--dark);
+}
+
+/* 統一導航欄佈局 */
+nav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    background: #fff;
+    padding: 10px 5%;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 80px;
+}
+
+.logo-img {
+    height: 65px; /* 統一 Bigger Logo */
+    width: auto;
+    display: block;
+}
+
+/* 導航按鈕樣式 */
+.btn-deck {
+    background: var(--secondary);
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+    justify-self: end;
+}
+
+.btn-deck:hover { transform: translateY(-2px); opacity: 0.9; }
+
+/* 響應式：手機版隱藏左邊返回鍵，縮小 Logo */
+@media (max-width: 768px) {
+    nav { grid-template-columns: 1fr 1fr; height: auto; padding: 15px 5%; }
+    .nav-left { display: none; }
+    .logo-img { height: 45px; }
+}
