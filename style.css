@@ -88,8 +88,10 @@ section { padding: 80px 5%; }
 .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
 /* .card { background: #fff; padding: 40px; border-radius: 25px; border: 1px solid var(--border); position: relative; text-align: center; }*/
 .card { background: #fff; padding: 40px; border-radius: 25px; border: 1px solid var(--primary); position: relative; text-align: center; }
+.card.featured { border: 3px solid var(--primary); transform: scale(1.05); }
 
 .card.featured { border: 3px solid var(--primary); transform: scale(1.05); }
+.card.enterprise { border: 3px solid color: #d4af37; transform: scale(1.05); }
 .badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: #fff; padding: 5px 20px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
 
 /* --- 7. 通用組件 (FAQ, Video, Buttons) --- */
