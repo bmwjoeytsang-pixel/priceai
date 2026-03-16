@@ -16,9 +16,15 @@ const navHTML = `
 `;
 
 const footerHTML = `
-<footer style="text-align:center; padding: 50px 0; color: #999; font-size: 0.9rem; border-top: 1px solid #eee; margin-top: 50px;">
-    <p>聯絡我們：<a href="mailto:info@priceai.hk" style="color:#666; text-decoration:none;">info@priceai.hk</a></p>
-    <p>&copy; 2026 PriceAI.hk All Rights Reserved.</p>
+<footer style="background:#fff; padding:60px 5%; border-top:1px solid #eee; text-align:center;">
+    <div style="margin-bottom:20px;">
+        <img src="/images/logo.png" style="height:40px; opacity:0.6; filter:grayscale(100%);">
+    </div>
+    <div style="display:flex; justify-content:center; gap:30px; margin-bottom:20px; flex-wrap:wrap;">
+        <a href="mailto:info@priceai.hk" style="text-decoration:none; color:#666;"><i class="fas fa-envelope"></i> info@priceai.hk</a>
+        <a href="https://wa.me/85265355251" style="text-decoration:none; color:#666;"><i class="fab fa-whatsapp"></i> WhatsApp 諮詢</a>
+    </div>
+    <p style="color:#aaa; font-size:0.85rem;">&copy; 2026 PriceAI.hk | 專門為香港零售商打造的 AI 定價專家</p>
 </footer>
 `;
 
