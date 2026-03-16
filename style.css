@@ -87,11 +87,36 @@ section { padding: 80px 5%; }
 
 .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
 /* .card { background: #fff; padding: 40px; border-radius: 25px; border: 1px solid var(--border); position: relative; text-align: center; }*/
-.card { background: #fff; padding: 40px; border-radius: 25px; border: 1px solid var(--primary); position: relative; text-align: center; }
-.card.featured { border: 3px solid var(--primary); transform: scale(1.05); }
+/* Standard 標準版 - 使用銅/棕色 */
 
-.card.featured { border: 3px solid var(--primary); transform: scale(1.05); }
-.card.enterprise { border: 3px solid color: #d4af37; transform: scale(1.05); }
+border: 1px solid #eee; /* 預設改為淺灰色邊框，更乾淨 */
+    position: relative; 
+    text-align: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.standard { 
+    border: 2px solid #b87333; 
+}
+
+/* Professional 專業版 (Featured) - 使用品牌藍色並放大 */
+.card.featured { 
+    border: 3px solid var(--primary); 
+    transform: scale(1.05); /* 只有這張卡片放大 */
+    z-index: 10;
+    box-shadow: 0 15px 40px rgba(66, 133, 244, 0.15);
+}
+
+/* Enterprise 企業版 - 使用高級金色 */
+.card.enterprise { 
+    border: 2px solid #d4af37; 
+}
+
+/* 滑鼠懸停效果：讓沒放大的卡片也能輕微浮動 */
+.card:not(.featured):hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
 .badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: #fff; padding: 5px 20px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
 
 /* --- 7. 通用組件 (FAQ, Video, Buttons) --- */
