@@ -99,8 +99,10 @@ section { padding: 80px 5%; }
 .faq-item { margin-bottom: 25px; background: #fff; padding: 25px; border-radius: 12px; border-bottom: 1px solid var(--border); }
 .faq-q { font-weight: bold; color: var(--primary); margin-bottom: 10px; }
 
+.btn { display: inline-block; padding: 15px 40px; background: var(--primary); color: #fff !important; border-radius: 50px; text-decoration: none; font-weight: bold; }
 .btn-wa { display: block; width: 100%; padding: 15px; background: #25d366; color: #fff !important; border-radius: 50px; text-decoration: none; font-weight: bold; text-align: center; }
 .btn-more { display: inline-block; padding: 15px 40px; background: var(--primary); color: #fff !important; border-radius: 50px; text-decoration: none; font-weight: bold; }
+.btn-whatsapp { display: inline-block; padding: 15px 40px; background: var(--primary); color: #fff !important; border-radius: 50px; text-decoration: none; font-weight: bold; }
 
 /* --- 8. 響應式佈局 --- */
 @media (max-width: 768px) {
