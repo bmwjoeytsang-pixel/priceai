@@ -1,4 +1,4 @@
-/* --- 1. 全域變量與基礎設定 --- */
+/* --- 1. 核心變量 --- */
 :root {
     --primary: #4285f4;
     --secondary: #34a853;
@@ -11,12 +11,9 @@
 }
 
 * { box-sizing: border-box; }
-body { 
-    font-family: 'Segoe UI', "Microsoft JhengHei", sans-serif; 
-    line-height: 1.6; margin: 0; color: var(--dark); background: #fff; 
-}
+body { font-family: 'Segoe UI', "Microsoft JhengHei", sans-serif; line-height: 1.6; margin: 0; color: var(--dark); background: #fff; }
 
-/* --- 2. 標準導航欄 (置中放大版) --- */
+/* --- 2. 標準導航欄 (JS 注入專用) --- */
 nav {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -27,24 +24,38 @@ nav {
     position: sticky;
     top: 0; z-index: 1000; height: 85px;
 }
-.logo-img { height: 70px; width: auto; display: block; transition: 0.3s; }
+.logo-img { height: 70px; width: auto; display: block; }
 .btn-deck { 
     background: var(--secondary); color: #fff !important; padding: 10px 22px; 
-    border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 14px; 
-    transition: 0.3s; justify-self: end;
+    border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 14px; justify-self: end;
 }
-.btn-deck:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(52,168,83,0.3); }
 
-/* --- 3. 通用區塊佈局 --- */
-section { padding: 80px 5%; }
-.hero { text-align: center; background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%); }
-.hero h1 { font-size: 2.8rem; color: var(--primary); margin-bottom: 20px; font-weight: 800; }
-.hero p { font-size: 1.2rem; max-width: 850px; margin: 0 auto 40px; color: #555; }
+/* --- 3. 首頁 & WhyChooseUs 頂部 Hero --- */
+.hero, .why-choose-hero {
+    text-align: center;
+    padding: 80px 5%;
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+}
+.hero h1, .why-choose-hero h1 { font-size: 2.8rem; color: var(--primary); margin-bottom: 20px; font-weight: 800; }
+.tagline { font-size: 1.4rem; font-weight: bold; color: #333; margin-bottom: 30px; }
 
-/* --- 4. 【WhyChooseUs】專屬樣式 --- */
+/* 核心價值對比框 */
+.comparison-box {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border-left: 8px solid var(--secondary);
+    text-align: left;
+}
+.highlight-text { color: var(--primary); font-weight: bold; font-size: 1.2rem; }
+
+/* --- 4. WhyChooseUs 三大優勢圓圈 --- */
 .feature-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px; max-width: 1200px; margin: 0 auto;
+    gap: 30px; max-width: 1200px; margin: 0 auto; padding: 40px 0;
 }
 .feature-card {
     background: #fff; padding: 40px; border-radius: 20px; text-align: center;
@@ -58,123 +69,40 @@ section { padding: 80px 5%; }
 .feature-card:nth-child(2) .icon-container { background: #e6f4ea; color: var(--secondary); }
 .feature-card:nth-child(3) .icon-container { background: #fff3e0; color: var(--warning); }
 
-/* --- 5. 【Case 案例頁】專屬樣式 --- */
-/*.case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }*/
-
-.case-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* 強制只有一欄 */
-    gap: 30px;
-    max-width: 800px; /* 限制寬度，避免盒子在電腦版拉得太長太醜 */
-    margin: 0 auto;
-}
-
+/* --- 5. 案例頁 Case Card --- */
+.case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 .case-card {
     background: #fff; border-radius: 20px; padding: 35px; border-top: 6px solid var(--primary);
     box-shadow: var(--shadow); transition: 0.3s; display: flex; flex-direction: column;
 }
-.industry-tag { font-size: 0.9rem; font-weight: bold; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
-.result-box { margin-top: auto; padding: 18px; border-radius: 12px; font-weight: bold; text-align: center; }
-
-/* 案例顏色標籤 */
+.result-box { margin-top: auto; padding: 18px; border-radius: 12px; font-weight: bold; text-align: center; background: #f8f9fa; }
 .case-wine { border-top-color: var(--primary); }
 .case-beauty { border-top-color: var(--secondary); }
 .case-appliance { border-top-color: var(--accent); }
 .case-baby { border-top-color: var(--warning); }
 
-/* --- 6. 【首頁 index】數據表格與價格 --- */
-.comp-table-wrapper { overflow-x: auto; margin: 40px auto; max-width: 1000px; }
+/* --- 6. FAQ & Step Box --- */
+.faq-section { max-width: 900px; margin: 0 auto; padding: 60px 0; }
+.faq-item { margin-bottom: 25px; padding: 25px; background: #fff; border-bottom: 1px solid var(--border); }
+.faq-q { font-weight: bold; color: var(--primary); font-size: 1.2rem; margin-bottom: 15px; }
+.step-box {
+    background: #f0f7ff; padding: 25px; border-radius: 12px;
+    border-left: 6px solid var(--primary); margin: 15px 0;
+}
+
+/* --- 7. 表格與按鈕 --- */
+.comp-table-wrapper { overflow-x: auto; margin: 40px 0; }
 .comp-table { width: 100%; border-collapse: collapse; box-shadow: var(--shadow); border-radius: 12px; overflow: hidden; }
-.comp-table th, .comp-table td { padding: 20px; border: 1px solid var(--border); text-align: center; }
+.comp-table th, .comp-table td { padding: 18px; border: 1px solid var(--border); text-align: center; }
 .highlight-col { background: #e8f0fe; color: var(--primary); font-weight: bold; }
 
-.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-.card { background: #fff; padding: 40px; border-radius: 25px; border: 1px solid var(--border); position: relative; text-align: center; }
-.card.featured { border: 3px solid var(--primary); transform: scale(1.05); }
-.badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: #fff; padding: 5px 20px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
-
-/* --- 7. 通用組件 (FAQ, Video, Buttons) --- */
-.video-container { max-width: 850px; margin: 0 auto; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.15); }
-.faq-section { max-width: 900px; margin: 0 auto; }
-.faq-item { margin-bottom: 25px; background: #fff; padding: 25px; border-radius: 12px; border-bottom: 1px solid var(--border); }
-.faq-q { font-weight: bold; color: var(--primary); margin-bottom: 10px; }
-
-.btn { display: inline-block; padding: 15px 40px; background: var(--primary); color: #fff !important; border-radius: 50px; text-decoration: none; font-weight: bold; }
 .btn-wa { display: block; width: 100%; padding: 15px; background: #25d366; color: #fff !important; border-radius: 50px; text-decoration: none; font-weight: bold; text-align: center; }
 .btn-more { display: inline-block; padding: 15px 40px; background: var(--primary); color: #fff !important; border-radius: 50px; text-decoration: none; font-weight: bold; }
-.btn-whatsapp { display: inline-block; padding: 15px 40px; background: var(--primary); color: #fff !important; border-radius: 50px; text-decoration: none; font-weight: bold; }
 
 /* --- 8. 響應式佈局 --- */
 @media (max-width: 768px) {
     nav { grid-template-columns: 1fr 1fr; height: auto; padding: 15px 5%; }
     .nav-left { display: none; }
     .logo-img { height: 50px; }
-    .hero h1 { font-size: 2rem; }
-    .card.featured { transform: none; }
-    section { padding: 50px 5%; }
-}
-
-/* --- FAQ 五步流程專屬樣式 --- */
-.step-box {
-    background: #f0f7ff;         /* 淺藍色背景 */
-    padding: 25px;               /* 內邊距 */
-    border-radius: 12px;         /* 圓角 */
-    border-left: 6px solid #4285f4; /* 左側藍色粗線，增加視覺重點 */
-    margin: 15px 0;
-    line-height: 1.8;            /* 增加行高，更好閱讀 */
-    font-size: 0.95rem;
-    color: #333;
-    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.05); /* 淡淡的陰影 */
-}
-
-.step-box strong {
-    color: #4285f4;              /* 標題顏色與品牌統一 */
-    font-size: 1.1rem;
-    display: block;
-    margin-bottom: 10px;
-}
-
-
-/* --- Why Choose Us 頂部標語樣式 --- */
-.why-choose-hero {
-    text-align: center;
-    padding: 80px 5%;
-    background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
-    border-bottom: 1px solid #eee;
-}
-
-.why-choose-hero h1 {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 10px;
-}
-
-.why-choose-hero .tagline {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 30px;
-}
-
-.why-choose-hero .comparison-box {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 30px;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    border-left: 8px solid var(--secondary); /* 用綠色代表賺錢/增長 */
-}
-
-.why-choose-hero .comparison-box p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.8;
-    margin: 0;
-}
-
-.why-choose-hero .highlight-text {
-    color: var(--primary);
-    font-weight: bold;
-    font-size: 1.2rem;
+    .hero h1, .why-choose-hero h1 { font-size: 2rem; }
 }
