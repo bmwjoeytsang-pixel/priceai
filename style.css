@@ -62,11 +62,8 @@ section { padding: 80px 5%; }
 /*.case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }*/
 
 .case-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* 強制只有一欄 */
-    gap: 30px;
-    max-width: 800px; /* 限制寬度，避免盒子在電腦版拉得太長太醜 */
-    margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px; max-width: 1200px; margin: 0 auto;
 }
 
 .case-card {
