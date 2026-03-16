@@ -113,3 +113,23 @@ section { padding: 80px 5%; }
     .card.featured { transform: none; }
     section { padding: 50px 5%; }
 }
+
+/* --- FAQ 五步流程專屬樣式 --- */
+.step-box {
+    background: #f0f7ff;         /* 淺藍色背景 */
+    padding: 25px;               /* 內邊距 */
+    border-radius: 12px;         /* 圓角 */
+    border-left: 6px solid #4285f4; /* 左側藍色粗線，增加視覺重點 */
+    margin: 15px 0;
+    line-height: 1.8;            /* 增加行高，更好閱讀 */
+    font-size: 0.95rem;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.05); /* 淡淡的陰影 */
+}
+
+.step-box strong {
+    color: #4285f4;              /* 標題顏色與品牌統一 */
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 10px;
+}
